@@ -1,0 +1,730 @@
+[
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "The top three classiers in terms of F1 score, precision, sensitivity and speci- city are Decision Tree, Gradient Boosting, and Neural Network and the top 3 in terms of AUC as shown in Table 4 are again Decision Tree, Gradient Boost- ing, and Neural Network. The system is going to be dealing with documents in bulk and the prediction time for Decision Tree is better when compared to both Gradient Boosting and Neural Network. Therefore, we would be choosing our conguration of the Decision Tree for making the classications.",
+    "similarity_score": 0.5732045769691467
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Classier Sensitivity Specicity Precision F1 Score Accuracy Decision Tree 0.986 0.952 0.953 0.970 96.95 % SVM 0.991 0.930 0.934 0.961 96.06 % K-Nearest Neighbors 0.979 0.945 0.946 0.962 96.22 % Random Forest 0.991 0.928 0.932 0.961 95.99 % Gaussian Naive Bayes",
+    "similarity_score": 0.5479661226272583
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Confusion Matrix Based Evaluation: We use evaluation parameters like Sensitivity, Specicity, Precision, F1 score and Net Accuracy calculated using confusion matrix to compare them to each other. Table 3 shows the results of this evaluation. ROC Curves and AUC: A receiver operating characteristics(ROC) curve is used to visualize the trade-os between sensitivity and specity. These graphs are used for performance based selection of classiers. The graph can be reduced to a numerical measure, AUC(or AUROC) which is the area under the ROC graph with values ranging from 0 to 1[26]. Table 4 shows the AUC scores for the",
+    "similarity_score": 0.4866425693035126
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "classiers used in this research. The discussion section provides more information on how we used AUC score to select the best classier.",
+    "similarity_score": 0.48205095529556274
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "The top three classiers based on net accuracy are Decision Tree, Gradient Boosting, and Neural Network, however classier selection can not solely rely on accuracy[28,29]. Therefore, we also weigh the metrics like AUC, F1 score, sensi- tivity, and specicity to choose the best suited classier for detecting headings.",
+    "similarity_score": 0.47581154108047485
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "26. Fawcett, Tom. An introduction to ROC analysis. Pattern recognition letters 27.8 2006.: 861-874. 27. Mago, Vijay Kumar, ed. Cross-Disciplinary Applications of Articial Intelligence and Pattern Recognition: Advancing Technologies: Advancing Technologies. IGI Global, 2011. 28. Huang, Jin, and Charles X. Ling. Using AUC and accuracy in evaluating learning algorithms. IEEE Transactions on knowledge and Data Engineering 17.3 2005.: 299-310. 29. Ling, Charles X., Jin Huang, and Harry Zhang. AUC: a better measure than accuracy in comparing learning algorithms. Conference of the canadian society for computational studies of intelligence. Springer, Berlin, Heidelberg, 2003.",
+    "similarity_score": 0.46346333622932434
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Testing the chosen classier on a general set of documents is important to show that it performs well on documents other than course outlines. We tested the chosen Decision Tree classier on 12,919 data points collected from documents like reports and articles2. These data points were manually tagged using a survey. All the participants were graduate students from computer science department and were asked to point out headings and subheadings in the documents. Table 5 shows the results which are equivalent if not better as compared to when tested on course outlines.",
+    "similarity_score": 0.45259588956832886
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "a variety of classiers for the purpose of selecting classiers best suited to this application. Recursive feature elimination[8]is used to ensure the classiers only use the best and minimum number of features for making predictions. Cross validation is used to tune the hyper parameters of a given machine learning al- gorithm for increased performance before testing it out on test data. The nal trained classier is currently being applied to detect headings in course outline documents and extract learning outcomes. The extracted learning outcomes are being used for automating the process of developing university/college transfer credit agreements by using semantic similarity algorithms[3].",
+    "similarity_score": 0.430592805147171
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Tuning each classiers parameters for optimal performance is performed using accuracy from cross validation as a measure. We use various combinations of classiers parameters and choose the combination with the best cross valida- tion accuracy. This process is performed on various classiers to choose their corresponding parameters. The description along with the nal selected tuning parameters for each classier used in this research are discussed in the next section.",
+    "similarity_score": 0.4296613931655884
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Sensitivity 0.928 Specicity 0.966 Precision 0.964 F1 SCORE 0.946 Accuracy 94.73 % AUC 0.97",
+    "similarity_score": 0.4176599979400635
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "After the most suitable features and parameters for each classier have been selected, we can proceed with training the classers using scikit-learn [18].",
+    "similarity_score": 0.41137784719467163
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Classier Name Selected Features Decision Tree Bold or Not, Font Threshold Flag, Words, Text Case, Verbs, Nouns, Cardinal Numbers",
+    "similarity_score": 0.38185614347457886
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Support Vector Machine (SVM) It is a classier that uses multi-dimensional hyperplanes to make classication. SVM also uses kernel functions to transform the data in sucha way that it is feasible for the hyperplane to eectively partition classes[15]. The kernel used is radial basis function(rbf), degree of the polynomial kernel function is set to 3 and gama is set to auto. The shrinking heuristics were enabled as they speed up the optimization. Tolerance for stop criteria is set to 2e 3 and ovr(one vs rest) decision function is chosen for decision function shape. The code snippet for training this classier with the chosen parameters is given in Box 2.",
+    "similarity_score": 0.3791953921318054
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Logistic Regression 0.982 0.904 0.911 0.945 94.34 % Gradient Boosting 0.991 0.941 0.944 0.967 96.66 % Neural Net 0.992 0.941 0.944 0.967 96.68 %",
+    "similarity_score": 0.37073183059692383
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Classier AUC Decision Tree 0.98 SVM 0.97 K-Nearest Neighbors 0.96 Random Forest 0.97 Gaussian Naive Bayes 0.96 Quadratic Discriminant Analysis 0.96",
+    "similarity_score": 0.3683249354362488
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "We recorded the time (in seconds) required for training each classier and also time for making predictions as shown in Fig 3. Time taken by a classier to make predictions is important when processing documents in bulk as it can increase the processing time. Time taken to train a classier only has to be done once therefore it is not given that much importance. The Decision Tree Classier took the least time for training while Gradient Boosting took the most. On compar- ing the prediction time Logistic Regression takes the least time and Random Forest takes the most. While prediction time is not the most important factor while choosing a classier we take it into consideration when two classiers are performing approximately the same.",
+    "similarity_score": 0.35631129145622253
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Logistic Regression It is a discriminative classier, therefore it works by dis- criminating amongst the dierent possible values of the classes[23]. Penalization method is set to l2. The tolerance for stopping criteria is set to 2e 4. The pa- rameter t intercept is set to true adding a constant to the decision function. The optimization solver used is liblinear and the maximum number of itera- tions taken for the solvers is set to 50. Multiclass is set to ovr tting a binary problem for each label. The number of CPU cores used for parallelizing over classes is set to 1. The code snippet for training this classier with the chosen parameters is given in Box 7.",
+    "similarity_score": 0.3391761779785156
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Cross validation is done by making 10 folds in the training set where one feature is removed per iteration. As per this analysis the accuracy does not increase on choosing to train the Decision Tree classier with more than the following seven features:",
+    "similarity_score": 0.33610451221466064
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Table 6. Pearson Correlation Coecient Between Each Feature Used in the Selected Classier and Final Decision Labels",
+    "similarity_score": 0.33527523279190063
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Box 7: Code Snippet for Training Logistic Regression Classier",
+    "similarity_score": 0.32894256711006165
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Logistic Regression 0.95 Gradient Boosting 0.98 Neural Net 0.98",
+    "similarity_score": 0.3284914791584015
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "for all the features used in the selected classier and nal decision label. The list is in descending order of pearson correlation coecient, therefore the top feature in the table contribute the most towards the nal decision. Each feature was removed from the classier one at a time and drop in evaluation metrics also verify the order of contribution presented by using the pearson correlation coecient. Therefore, the top three contributing features are the ones that rely on the physical attributes of the text.",
+    "similarity_score": 0.32282018661499023
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Box 2: Code Snippet for Training Support Vector Machine Classier",
+    "similarity_score": 0.32201191782951355
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Box 1: Code Snippet for Training Decision Tree Classier",
+    "similarity_score": 0.3200555145740509
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "The code snippet for training this classier with the chosen parameters is given in Box 1",
+    "similarity_score": 0.31164562702178955
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Training and Prediction Time: When dealing with a large number of doc- uments, the time required to train a model and make predictions is important and is dependant on the type of classier used, the number of features and the amount of data points. In this research all classiers are trained using the same number of features and data points, therefore time takenprovides a good mea- sure of variations in training and prediction speed associated with each dierent classier being used. Of note, the training time for a classier should be consid- ered in context, as training only needs to be performed once and can be saved for later use. Therefore, a model that takes a long time to train can still be practical so long as it does not take a lot of time to make predictions. Fig 3. shows time required for training and making predictions using these classiers. Time shown is average of 10 observations, which is done to reduce the eect of programs running in the background on the comparison.",
+    "similarity_score": 0.3089263439178467
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "After pre-processing, 14 training features are established. There is a need to select the top features for building each individual model with maximum ac- curacy. Table 1 lists all the features we are choosing from. To achieve this we used Recursive feature elimination with Cross-Validation (RFECV), which re- cursively removes weak attributes/features and uses the model accuracy to iden- tify features that are contributing towards increasing the predictive power of the model[8]. The selection process is performed using the machine learning library, scikit-learn.",
+    "similarity_score": 0.3040974736213684
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "The discussed conguration of Decision Tree is best suited to detect heading as discussed in Section 5. Analyzing the contribution of each feature towards the nal decision made by the classier is also important to understand the implications of the results. Table 6 shows the pearson correlation coecient",
+    "similarity_score": 0.30357474088668823
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Fig. 3. Time required to train classiers and run predictions on test data",
+    "similarity_score": 0.3022424280643463
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "This research has provided a structured methodology and systematic evaluation of a heading detection system for PDF documents. The detected headings pro- vide information on how the text is structured in a document. This structural information is used for extracting specic text from these documents based on the requirements of the eld of application. This supervised learning approach has demonstrated good results and we are currently applying our conguration of the Decision Tree classier in the eld of post-secondary curriculum analysis to identify headings and extract learning outcomes from course outlines for a research being conducted at DATALAB, Lakehead University, Canada.",
+    "similarity_score": 0.29498690366744995
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Quadratic Discriminant Analysis It works under the assumption that the measurements for each class are normally distributed while not assuming the co- variance to be identical for all the classes. Discriminant analysis is used to choose the best predictor variable(s) and is more exible than linear models making it better for a variety of problems[24]. Prior probabilities of the classes is set to [0.5, 0.5] as the number of headings is far less as compared to other text. The threshold used for rank estimation is set to 1e4. The code snippet for training this classier with the chosen parameters is given in Box 6.",
+    "similarity_score": 0.2947479784488678
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Gradient Boosting This classication method uses an ensemble of weak pre- diction models in a stage wise manner. In each stage, a weak model is introduced to make up for the limitations of the existing weak models[21]. The loss function to be optimized is set as deviance and learning rate is set to 0.1. The minimum number of samples required to split an internal node is set to 2, the minimum number of samples needed to be at a leaf node is set to 1 and maximum depth of the individual regression estimators set to 3. The number of boosting stages is set to 150 and the measure of quality of a split is set to friedman mse. The code snippet for training this classier with the chosen parameters is given in Box 8.",
+    "similarity_score": 0.29225465655326843
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Gradient Boosting Bold or Not, Font Threshold Flag, Words, Text Case, Verbs, Nouns, Cardinal Numbers",
+    "similarity_score": 0.2850891053676605
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Logistic Regression Bold or Not, Font Threshold Flag, Words, Text Case, Verbs, Nouns, Adverbs, Coordinating Conjunctions",
+    "similarity_score": 0.28478336334228516
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "svmclf = SVC(kernel=rbf, degree=3, gamma=auto, shrinking=True, tol=0.002, decision function shape=ovr) svmclf = svmclf.t(traindata, truelabels)",
+    "similarity_score": 0.27993348240852356
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "grdbstcf = GradientBoostingClassier(loss = deviance, learning rate = 0.1, min samples split = 2, min samples leaf = 1, max depth = 3, n estimators = 150, subsample = 1.0, criterion = friedman mse) grdbstcf = grdbstcf.t(traindata, labels)",
+    "similarity_score": 0.27900415658950806
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Gaussian Naive Bayes This classier works by using Bayesian theorem with assumption of strong independence between the predictors(features). It is very useful for large data sets as it is quite simple to build and has no complicated iterative parameters[22]. This classier does not have much to set when it comes to conguring parameters. Prior probabilities of the classes is set to [0.5, 0.5] as the number of headings is less as compared to other text. The code snippet for training this classier with the chosen parameters is given in Box 5.",
+    "similarity_score": 0.2701355814933777
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "The same process is repeated for all the classiers and their individual set of chosen features are listed in Table 2.",
+    "similarity_score": 0.2678409516811371
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Box 6: Code Snippet for Training Quadratic Discriminant Analysis Classier",
+    "similarity_score": 0.26749518513679504
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "SVM Bold or Not, Font Threshold Flag, Words, Text Case, Verbs, Nouns, Adjectives, Adverbs",
+    "similarity_score": 0.26425594091415405
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "treeclf = DecisionTreeClassier(criterion = gini, splitter = best, min samples split = 2, min samples leaf = 3) treeclf = treeclf.t(traindata, truelabels)",
+    "similarity_score": 0.2624030113220215
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Box 5: Code Snippet for Training Gaussian Naive Bayes Classier",
+    "similarity_score": 0.2586328685283661
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Box 8: Code Snippet for Training Gradient Boosting Classier",
+    "similarity_score": 0.2531823515892029
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "RandomForestClassier(n estimators = 2, criterion = gini, max depth = 5, max features=auto, min samples split=2, min samples leaf=3, n jobs=1) rndForstclf = rndForstclf.t(traindata, truelabels)",
+    "similarity_score": 0.24979496002197266
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "logisticRegr = LogisticRegression(penalty=l2, tol=0.0002, t intercept = True, solver=liblinear, max iter=50, multi class = ovr, n jobs=1) logisticRegr = logisticRegr.t(traindata, truelabels)",
+    "similarity_score": 0.24896866083145142
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Abstract. As the Portable Document Format (PDF) le format in- creases in popularity, research in analysing its structure for text ex- traction and analysis is necessary. Detecting headings can be a crucial component of classifying and extracting meaningful data. This research involves training a supervised learning model to detect headings with fea- tures carefully selected through recursive feature elimination. The best performing classier had an accuracy of 96.95%, sensitivity of 0.986 and a specicity of 0.953. This research into heading detection contributes to the eld of PDF based text extraction and can be applied to the au- tomation of large scale PDF text analysis in a variety of professional and policy based contexts.",
+    "similarity_score": 0.24597661197185516
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Data Labelling: Data labelling refers to the process of assigning data points labels, this makes the data suitable for training supervised machine learning models. All the 83914 data points are manually labelled by cross referring to the",
+    "similarity_score": 0.24584025144577026
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "nurlntclf = MLPRegressor(hidden layer sizes = (100, ), activation = tanh, solver = lbfgs, learning rate = invscaling, batch size = auto, learning rate init = 0.001, max iter = 300, shue = True, beta 1 = 0.9, beta 2 = 0.999) nurlntclf = nurlntclf.t(traindata, labels)",
+    "similarity_score": 0.24509435892105103
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "As the amount of information stored within PDF documents increases world- wide, the opportunities for large scale text based analysis requires increasingly automated processes, as the amount of document processing is time consuming and labour intensive for human professionals. Systematic processing and extrac- tion of textual structure is increasingly necessary and useful as demonstrated in El-Haj et al.s work involving 1500 nancial statements[7]. Categorizing data into seperate sections is quite easy for humans, as they rely on visual cues such as headings to process textual information. Machines, despite being able to process large amounts information at high speeds, require eort to classify and interpret text based data. This paper explores the application of supervised classiers to operationalize a system that would aid in the identication of headings. PDF documents are a visually exact digital copy that displays text by drawing char- acters on a specic location [10] and present a challenge in analysis because the les do not provide enough information on how the text is organized and for- matted. A supervised classier that is trained on labelled data provides one solution to categorizing PDF text as it tells the classier how to make predictions based on the data provided. This research involved comparing and systematically testing",
+    "similarity_score": 0.23399046063423157
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Balancing The Dataset: The dataset is considered imbalanced if the preva- lence of one class is more than the other. The number of headings in our dataset is very less as compared to non-headings, this is because of the fact that the number of headings in a document is far less than the number of other text elements. Sklearns implementation for Synthetic Minority Over-sampling Tech- nique (SMOTE) is used to balanced the dataset, which does so by creating synthetic data points for the minority class to make it even [18,16].",
+    "similarity_score": 0.23054927587509155
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "documents as both training and testing data needs to be labelled. If the text in the data point was a heading the label was set to 1 otherwise 0. Labelling data is one of the most important steps of preprocessing because the performance of the model depends on how well the data is labelled. Example of labelled data points is provided in Fig 1(c).",
+    "similarity_score": 0.22772204875946045
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Neural Net Bold or Not, Font Threshold Flag, Words, Text Case, Verbs, Nouns, Cardinal Numbers",
+    "similarity_score": 0.22722512483596802
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Box 4: Code Snippet for Training Random Forest Classier",
+    "similarity_score": 0.22629386186599731
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "The process of transforming raw data into usable training data is referred to as data preprocessing. The steps of data preprocessing for this research are as follows:",
+    "similarity_score": 0.2228621244430542
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Random Forest This classier works by choosing random data points from the training set and creating a set of decision tress. The nal decision regarding the class is made by aggreggation of the outputs from all the trees[19]. The number of trees in the forest is set to 2 and gini is used as a measure for quality of a split. The maximum depth of trees is set to 5 and the maximum number of features to be considered while searching for the best split is se to auto. The minimum number of samples required to split an internal node is set to 2 and the minimum number of samples needed to be at a leaf node is set to 3. The number of parallel jobs to running for both t and predict is set to 1. The code snippet for training this classier with the chosen parameters is given in Box 4.",
+    "similarity_score": 0.2180943787097931
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Decision Tree Decision trees are the most widely used amongst classiers as they have a simple ow-chart like structure starting from a root node. It branches oto further nodes and terminating at a leaf node. At each non-leaf node a decision is made, which selects the branch to follow. The process contin- ues to the point where a leaf node is reached, which contains the corresponding decison[14]. Gini impurity is used as a measure for quality of a split, which tells if the split made the dataset more pure. Using Gini makes it computationally less expensive as compared to entropy which involves computation of logarithmic functions. The best option for strategy chooses the best split at each node. The minimum number of samples required to split an internal node is set to 2 and the minimum number of samples needed to be at a leaf node is set to 3.",
+    "similarity_score": 0.2146361768245697
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "3. Lakehead University. Learning Objective Automated Gap Analysis. 2018, www.loaga.science/. 4. Goslin, Kyle, and Markus Hofmann. Cross Domain Assessment of Document to HTML Conversion Tools to Quantify Text and Structural Loss during Document Analysis. Intelligence and Security Informatics Conference (EISIC), 2013 Euro- pean. IEEE, 2013. 5. Rahman, Fuad, and Hassan Alam. Conversion of PDF documents into HTML: a case study of document image analysis. Signals, Systems and Computers, 2004. Conference Record of the Thirty-Seventh Asilomar Conference on. Vol. 1. IEEE, 2003. 6. Manabe, Tomohiro, and Keishi Tajima. Extracting logical hierarchical structure of HTML documents based on headings. Proceedings of the VLDB Endowment 8.12 2015.: 1606-1617. 7. El-Haj, Mahmoud, et al. Detecting document structure in a very large corpus of UK nancial reports. 2014.: 1335-1338. 8. Guyon, I., Weston, J., Barnhill, S. et al. Machine Learning 2002. 389422. 9. Bird, Steven, Ewan Klein, and Edward Loper. Natural language processing with Python: analyzing text with the natural language toolkit. OReilly Media, Inc., 2009. 10. Bienz, Tim, Richard Cohn, and Adobe Systems (Mountain View, Calif.). Portable document format reference manual. Reading, MA, USA: Addison-Wesley, 1993. 11. Google. Custom Google Search API. Google, Google, 2018, developers.google.com/custom-search/json-api/v1/overview. 12. Shinyama, Yusuke. PDFMiner: Python PDF parser and analyzer. 13. Goyvaerts, Jan, and Steven Levithan. Regular expressions cookbook. Oreilly, 2012. 14. Lior, Rokach. Data mining with decision trees: theory and applications. Vol. 81. World scientic, 2014. 15. Ben-Hur, Asa, and Jason Weston. A users guide to support vector machines. Data mining techniques for the life sciences. Humana Press, 2010. 223-239. 16. Chawla, Nitesh V., et al. SMOTE: synthetic minority over-sampling technique. Journal of articial intelligence research 16 (2002): 321-357. 17. D. T. Larose, k-nearest neighbor algorithm in Discovering Knowledge in Data: An Introduction to Data Mining, Hoboken, NJ, USA:Wiley, pp. 90-106, 2005. 18. Pedregosa, Fabian, et al. Scikit-learn: Machine learning in Python. Journal of machine learning research 12.Oct (2011): 2825-2830. 19. Louppe, Gilles. Understanding random forests: From theory to practice. arXiv preprint arXiv:1407.7502 2014. 20. Parikh, Rajul, et al. Understanding and using sensitivity, specicity and predictive values. Indian journal of ophthalmology 56.1 2008.: 45. 21. Ridgeway, Greg. The state of boosting. Computing Science and Statistics 1999.: 172-181. 22. Rish, Irina. An empirical study of the naive Bayes classier. IJCAI 2001 work- shop on empirical methods in articial intelligence. Vol. 3. No. 22. IBM, 2001. 23. Pohar, Maja, Mateja Blas, and Sandra Turk. Comparison of logistic regression and linear discriminant analysis: a simulation study. Metodoloski zvezki 1.1 2004.: 143. 24. Sueyoshi, Toshiyuki. DEA-discriminant analysis: methodological comparison among eight discriminant analysis approaches. European Journal of Operational Research 169.1 2006.: 247-272. 25. Graupe, Daniel. Principles of articial neural networks. Vol. 7. World Scientic, 2013.",
+    "similarity_score": 0.2146243155002594
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Box 9: Code Snippet for Training Neural Net Classier",
+    "similarity_score": 0.20019163191318512
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "The POS frequencies provides the model with information on the grammati- cal aspect of the text and can be used to exploit the frequency of these labels in a text to identify headings and contribute to the accuracy of the model. For example, headings tend to have no verbs in them, though some might have them but absence of verbs increases the probability of the text being an heading. All frequency data collected from POS tagging is analysed in the feature selection process to dierentiate between useful and irrelevant features collected through it. The frequency for each POS label is calculated and used to calculate the frequency of each POS tag in the text for each data point. These frequencies serve as potential features for the model.",
+    "similarity_score": 0.2000543624162674
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Neural Net This classier works by imitating the neural structure of the brain. One data point is processed at a time and the actual classication is compared to the classication made by the classier. Any errors recorded in the classication process are looped back into algorithm to improve classication performance in future iterations[27,25]. The classier is congured to have one hidden layer with 100 units. The activation function used for the hidden layer is tanh. The solver used for weight optimization is lbfgs. The batch rate is set to auto and the initial learning rate is set to 0.001. The parameter max iter is set to 300, which for adam solver denes the number of epochs. Sample shue is set to true, which enables sample shuing in each iteration. The exponential decay rates for estimates of the rst and second moment vector is set to 0.9 and 0.999 respec- tively. The code snippet for training this classier with the chosen parameters is given in Box 9.",
+    "similarity_score": 0.19890417158603668
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "A Supervised Learning Approach For Heading Detection 5",
+    "similarity_score": 0.1959826648235321
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "tent sections to automate the process of extracting text from a PDF documents. We present out supervised learning approach for heading detection as a solution for it.",
+    "similarity_score": 0.19509918987751007
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Random Forest Bold or Not, Font Threshold Flag, Words, Text Case, Verbs, Nouns, Adverbs, Cardinal Numbers, Coordinating Conjunctions",
+    "similarity_score": 0.19432756304740906
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Feature Name Pearson Correlation Coecient Bold or Not 0.7022 Font Threshold Flag 0.2385 Words 0.1389 Verbs 0.1229 Nouns 0.1207 Cardinal Numbers 0.1201 Text Case 0.0660",
+    "similarity_score": 0.19421571493148804
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "This research would not have been possible without the nancial support pro- vided by Ontario Council on Articulation and Transfer (ONCAT) through Project Number-2017-17-LU. We would also like to express our gratitude towards the datalab.science team and Andrew Heppner for their support.",
+    "similarity_score": 0.185991108417511
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "El-Haj et al. provide a practical application of document structure detection through the analysis of a large corpus of UK nancial reports including 1500 annual reports from 200 dierent organizations. A list of gold standard section names was generated from 50 randomly selected reports and used to match with corresponding sections of every document page in the dataset. Section matches were then extracted and evaluated using sensitivity, specicity and F1 score in addition to being reviewed by a domain expert for accuracy[7].",
+    "similarity_score": 0.18440097570419312
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "The extension of this work includes tagging of multiple labels like heading, para- graph text, header/footer text and table text. While classifying paragraph text is possible using the existing features, for properly classifying table text and header/footer text more data features are necessary. We are currently looking features from our white space detection approach discussed in chapter 5 and bounding box data from PDF to XML conversion to provide the model with what it needs to make this classication.",
+    "similarity_score": 0.1827150136232376
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Box 3: Code Snippet for Training k-Nearest Neighbors Classier",
+    "similarity_score": 0.1808854043483734
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Each data point contains some text, font size and a ag which is either 1 or 0 depending on the corresponding text being bold or not. The whole process yielded 83,194 data points, which was then exported into an Excel le for further pre-processing.",
+    "similarity_score": 0.17897823452949524
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "A Supervised Learning Approach For Heading Detection 7",
+    "similarity_score": 0.17755882441997528
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "All these features brings the count of total number of features generated using the text to 11, 9 from POS tagging the text and 2 using its physical properties.",
+    "similarity_score": 0.1762116700410843
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "k-Nearest Neighbors The main idea behind k-Nearest Neighbors is that it takes into account the class of its neighbors to decide how to classify the data point under consideration. Each neighbors class is considered as their vote to- wards that class and the class with the most votes is assigned to that data point[17]. The number of neighbours used to classify a point is set to 10. Each neighbours are weighed equally as weights is set to distance. Minkowsky dis- tance function used as the distance metric. The code snippet for training this classier with the chosen parameters is given in Box 3.",
+    "similarity_score": 0.17584526538848877
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "A Supervised Learning Approach For Heading Detection 15",
+    "similarity_score": 0.17436464130878448
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "A Supervised Learning Approach For Heading Detection 11",
+    "similarity_score": 0.17416194081306458
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "A Supervised Learning Approach For Heading Detection 9",
+    "similarity_score": 0.17200860381126404
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "A Supervised Learning Approach For Heading Detection 3",
+    "similarity_score": 0.16925734281539917
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "A Supervised Learning Approach For Heading Detection 19",
+    "similarity_score": 0.1671433448791504
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "A Supervised Learning Approach For Heading Detection 17",
+    "similarity_score": 0.1613086760044098
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "A Supervised Learning Approach For Heading Detection 13",
+    "similarity_score": 0.15956363081932068
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "All features are integers, except for Bold or Not and Font Threshold Flag which are binary. Feature Name Description Characters Number of characters in the text. Words Number of words in the text. Text Case Assumes the value 0,1,2 or 3 depending on the text being be- ing in lower case, upper case, title case or none of the three respectively. Bold or Not Assumes the value 1 or 0 depending on the text being bold or not. Font Threshold Flag Assumes the value 1 or 0 depending on the font size of the text being greater than the threshold or not. Verbs Number of verbs in the text. Nouns Number of nouns in the text. Adjectives Number of adjectives in the text. Adverbs Number of adverbs in the text. Pronouns Number of pronouns in the text. Cardinal Numbers Number of cardinal numbers in the text. Coordinating Con- junctions",
+    "similarity_score": 0.15891923010349274
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "1. Khusro, Shah, Asima Latif, and Irfan Ullah. On methods and tools of table detec- tion, extraction and annotation in PDF documents. Journal of Information Science 41.1 2015.: 41-57. 2. Jiang, Deliang, and Xiaohu Yang. Converting PDF to HTML approach based on Text Detection. Proceedings of the 2nd International Conference on Interaction Sciences: Information Technology, Culture and Human. ACM, 2009.",
+    "similarity_score": 0.15769319236278534
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Lakehead University, 955 Oliver Rd, Thunder Bay, ON P7B 5E1",
+    "similarity_score": 0.15697526931762695
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "A Supervised Learning Approach For Heading Detection",
+    "similarity_score": 0.15484778583049774
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "quadclf = QuadraticDiscriminantAnalysis(priors = [0.5, 0.5], tol = 0.0001) quadclf = quadclf.t(traindata, truelabels)",
+    "similarity_score": 0.15117529034614563
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Predeterminers Number of predeterminer in the text. Interjections Number of Interjections in the text.",
+    "similarity_score": 0.14708802103996277
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Our data set consisted of 500 documents1 downloaded from Google using Google Custom Search API [11]. To extract the correspoding formatting/style informa- tion the documents were converted from PDF to HTML using pdf2txt, which is a PDFMiner wrapper available in Python [12]. This is illustrated in Fig 1 which shows some sample text and its corresponding HTML tags generated using the conversion process. The nal data points are also shown in the Fig 1, which was generated by parsing the HTML tags using regular expressions. A regular expression is string of characters used to dene a search pattern[13]. The regular expressions used for parsing the tags are as follows:",
+    "similarity_score": 0.14453154802322388
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "gaussianclf = GaussianNB(priors = [0.5, 0.5]) gaussianclf = gaussianclf.t(traindata, truelabels)",
+    "similarity_score": 0.14123424887657166
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "While PDF format is convenient as it preserves the structure of a document across platforms, extracting textual layout information is required for detecting headings and further analysis. One solution to extracting layout information is to convert the PDF into HTML and use the HTML tags for further analysis. Once converted to HTML all the information related to text formatting required for the analysis, like font size and boldness of text, can be easily extracted. A variety of PDF to HTML document tools are available and have been assessed based on the text and structural loss associated with each tool[4]. Additional work includes PDF to HTML text detection approaches that maintain layout and font information[2], table detection, extraction and annotation[1] and analy- sis using white spaces[5]. HTML conversion is clearly a well established approach to analyzing PDF layout and content.",
+    "similarity_score": 0.14056754112243652
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Bold or Not, Font Threshold Flag, Words, Verbs, Nouns, Adjec- tives, Cardinal Numbers, Coordinating Conjunctions",
+    "similarity_score": 0.13719403743743896
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Bold or Not, Font Threshold Flag, Words, Verbs, Nouns, Adjec- tives, Cardinal Numbers, Coordinating Conjunctions",
+    "similarity_score": 0.13719403743743896
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Data Transformation: The process of transforming data into a form that has more predictive value is known as data transformation. The purpose of data transformation is to convert raw data points into features that contribute to more predictive value in training and decision making related to heading identication. For example, font size and text are two features from the raw data which, in their base form, do not have much value but can be transformed into useful features for training an ecient model. The list of transformed data elds are as follows:",
+    "similarity_score": 0.13543961942195892
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Previous research provides insight into processes related to extracting the head- ing layout of a HTML document[6]. In Manabes work, headings are used to divide a document at certain locations that indicate a change in topic. Docu- ment Object Model(DOM) trees are used to sort candidate headings based on their signicance and to dene blocks. A recursive approach is applied for docu- ment segmentation using the list of candidate headings and evaluate with good results using a manually labelled dataset.",
+    "similarity_score": 0.13265235722064972
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Sahib Singh Budhiraja and Vijay Mago (sbudhira,vmago)@lakeheadu.ca",
+    "similarity_score": 0.13178661465644836
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Font Flag: Headings tend to be larger in terms of font size as compared to the paragraph text that follows. Therefore, a higher font size increases the probability that the text is a heading. However, since each document is unique, there can not be a single threshold applied across all instances. Thresholds are calculated for each document by measuring the frequency of each font size where each character with a particular font size is counted as one instance. The font size which has the maximum frequency is used as the threshold. This approach relies on the assumption that the most frequently used font size is the one that is being used for the paragraph text, so having any font size above that increases the probability of that text being a heading. Fig 2 shows that the most frequently used font size is for the paragraph text with size 9 and all other text above it has more chances of being a heading. Font Flag can take two possible values 0 and 1. If the font size for that data point is less than the corresponding threshold then the value is set to 0, otherwise it is set as 1. Text: The text is transformed into the following feature variables, which are also listed in Table 1.",
+    "similarity_score": 0.13060614466667175
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Keywords: Heading Detection Text Segmentation Supervised Ap- proach.",
+    "similarity_score": 0.12608349323272705
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Number of Words: The number of words in the text can be used for training, as headings tend to have less words when compared to regular sentences and paragraphs. Text Case: Headings mostly use title case, while sometimes they are in upper case as well. This variable tells whether the text is in upper case",
+    "similarity_score": 0.12318763881921768
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "2 Repository available at: https://github.com/sahib-s/Generalizability/",
+    "similarity_score": 0.11626191437244415
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Bold or Not, Font Threshold Flag, Words, Verbs, Nouns, Adjec- tives, Coordinating Conjunctions",
+    "similarity_score": 0.11364350467920303
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "neighclf = KNeighborsClassier(n neighbors = 10, weights = distance, metric = minkowski) neighclf = neighclf.t(traindata, truelabels)",
+    "similarity_score": 0.1078757494688034
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "To check if text is bold we look for the following regular expression for the word bold in the starting tag:",
+    "similarity_score": 0.08533798158168793
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "1 Repository available at: https://github.com/sahib-s/Heading-Detection-PDF-Files",
+    "similarity_score": 0.08338462561368942
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "(all letters in upper case), lower case (all letters in lower case), title case (rst letter of all words in uppercase) or sentence case (only the rst letter of the text in uppercase). Features From Parts of speech(POS) Tagging: POS Tagging is the pro- cess of assigning parts of speech (verb, adverb, adjective, noun) to each word, which are referred to as tokens. The text from each data point is rst tokenized and then each token is assigned a POS label [9].",
+    "similarity_score": 0.060663238167762756
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "Current research has taken steps towards a system which analyses a documents textual structure. But there is a need to have an approach that can eciently and accurately analyse the textual layout of a document and divide it into con-",
+    "similarity_score": 0.022327842190861702
+  },
+  {
+    "document": "Unknown",
+    "section_title": "Untitled",
+    "page_number": -1,
+    "text": "r< \\s?span[>]fontsize : (\\w)px[>]> (.?) < \\/span\\b[>]>",
+    "similarity_score": -0.016356363892555237
+  }
+]

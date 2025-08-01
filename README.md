@@ -1,6 +1,6 @@
-# 🧭 Round 1B Submission — Travel Planner Document Intelligence
+# 🧭Round 1B — Persona-Driven Document Intelligence System
 
-In Round 1B of the "Connect What Matters — For the User Who Matters" challenge, we were tasked with building a **CPU-only, <1GB model** that analyzes input documents and intelligently extracts **relevant sections** based on a given **user persona** and their **job-to-be-done (JTBD)**.
+In Round 1B of the Adobe India Hackathon 2025 , we were tasked with building a **CPU-only, <1GB model** that analyzes input documents and intelligently extracts **relevant sections** based on a given **user persona** and their **job-to-be-done (JTBD)**.
 
 ## 💡 Solution Summary
 
